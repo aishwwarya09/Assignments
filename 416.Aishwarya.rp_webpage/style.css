@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background: #f3f3f3;
+  color: #333;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width 0.3s;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+nav a:hover::after,
+nav a:focus::after {
+  width: 100%;
+}
+
+header {
+  background-color: #0D1B2A;
+  color: white;
+  padding: 15px 20px;
+  position: relative;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  display: none;
+  cursor: pointer;
+}
+
+nav .nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+nav .nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #0D1B2A;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 10;
+  }
+
+  nav .nav-links.show {
+    display: flex;
+  }
+
+  nav .nav-links li {
+    text-align: center;
+    padding: 12px 0;
+  }
+}
+
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(to right, #e3f2fd, #ede7f6);
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* DESTINATIONS SECTION */
+#destinations {
+  padding: 30px 20px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+#itinerary {
+  padding: 30px 20px;
+  background: #f8f8f8;
+}
+
+.itinerary-card {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 15px;
+}
+
+#contact {
+  padding: 30px 20px;
+  background: white;
+}
+
+form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+form input,
+form textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  padding: 10px;
+  background: #0D1B2A;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #0D1B2A;
+}
+
+/* FOOTER */
+footer {
+  background: #0D1B2A;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 30px;
+}
+
