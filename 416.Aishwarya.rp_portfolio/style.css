@@ -1,0 +1,301 @@
+body {
+  font-family: 'Georgia', serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+header {
+  background-color: #800020;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width 0.3s;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+nav a:hover::after,
+nav a:focus::after {
+  width: 100%;
+}
+
+
+main {
+  padding: 20px;
+}
+
+h2 {
+  color:#800020
+}
+
+.welcome, .about-me, .contact {
+  margin-bottom: 40px;
+}
+
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.about-content .text {
+  width: 60%;
+}
+
+.about-content .image img {
+  width: 250px;
+  border-radius: 10px;
+  margin-left: -60px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table, th, td {
+  border: 1px solid #aaa;
+}
+
+th, td {
+  padding: 8px 12px;
+  text-align: left;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+}
+
+form input, form textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+button {
+  background-color: #800020;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.hidden {
+  display: none;
+}
+
+.contact button {
+  padding: 10px 20px;
+  background-color: #800020;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.contact button:hover {
+  background-color: #800020;
+}
+
+.form-container {
+  background-color: #f1f1f1;
+  padding: 30px;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input,
+form textarea,
+form select {
+  margin-bottom: 12px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+form label {
+  font-weight: bold;
+}
+
+.gender-options,
+.skills-options {
+  margin-left: 15px;
+}
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background-color: white;
+  margin: 10% auto;
+  padding: 20px;
+  width: 50%;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.close {
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 30px;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #888;
+  cursor: pointer;
+}
+.close:hover {
+  color: red;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+form input,
+form textarea,
+form select {
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+form label {
+  font-weight: bold;
+}
+.gender-options,
+.skills-options {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+button[type="submit"] {
+  background-color: #800020;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button[type="submit"]:hover {
+  background-color: #800020;
+}
+.hidden {
+  display: none;
+}
+.projects {
+  margin-bottom: 40px;
+}
+
+.projects h2 {
+  color: #800020; /* or #FFC0CB if you want baby pink */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.project {
+  background-color: #FFC0CB;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  border-left: 5px solid #fff0f5;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.project h3 {
+  margin-top: 0;
+  color: #800020; 
+}
+
+.project p {
+  margin: 5px 0 0 0;
+}
+.project {
+  background-color: #fff0f1;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  border-left: 5px solid #FFC0CB;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.project h3 {
+  margin-top: 0;
+  color: #800020;
+}
+
+.project p {
+  margin: 5px 0 0 0;
+}
+
